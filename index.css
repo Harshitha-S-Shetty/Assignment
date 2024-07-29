@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.bg-image {
+  background-image: url('https://scontent.fixe3-1.fna.fbcdn.net/v/t39.30808-6/300614121_441917111312615_5282546850771544217_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=I2g-urHpEDYQ7kNvgF3P_RG&_nc_ht=scontent.fixe3-1.fna&oh=00_AYDKxrxedJyBshFMs8w8KkZVUcJj2tFLOoLsKwQb0ZqGag&oe=66AD967D');
+  background-size: cover;
+  background-position: center;
+}
