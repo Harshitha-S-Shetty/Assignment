@@ -23,7 +23,7 @@ function Header() {
             </ul>
           </nav>
           <div className="flex items-center space-x-3">
-            <Link to="/register">
+            <Link to="/login">
               <button className="bg-gray-100 text-blue-800 border rounded-full px-4 py-1">Login</button>
             </Link>
             <button className="bg-blue-600 text-white rounded-full px-4 py-1">Request Demo</button>
