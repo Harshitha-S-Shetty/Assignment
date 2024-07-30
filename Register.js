@@ -22,80 +22,90 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gray-50">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-md lg:max-w-xl">
-        <h2 className="text-3xl font-bold mb-6 text-center">Create an Account</h2>
-        <p className="text-center mb-6">Sign up to start managing your school's finances efficiently</p>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-gray-700 mb-1">School Name</label>
-            <input
-              type="text"
-              name="schoolName"
-              value={formData.schoolName}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Enter your school's name"
-            />
+    <div className="flex flex-col lg:flex-row lg:justify-center lg:h-screen bg-white">
+      <div className="p-4 lg:p-8 w-full lg:w-1/2 lg:mr-8 lg:flex lg:items-center lg:justify-center lg:h-full">
+        <div className="w-full max-w-sm lg:w-full"> 
+          <div className="text-center mb-7 mt-7">
+            <h2 className="text-2xl font-bold mb-1">Create an Account</h2>
+            <p className="mb-4 text-gray-400">Sign up to start managing your <br/>school's finances efficiently</p>
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 mb-1">Administrator Name</label>
-            <input
-              type="text"
-              name="adminName"
-              value={formData.adminName}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Your full name"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 mb-1">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="admin@school.edu"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 mb-1">Password</label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Create a strong password"
-            />
-          </div>
-          <div className="mb-6">
-            <label className="block text-gray-700 mb-1">School Type</label>
-            <select
-              name="schoolType"
-              value={formData.schoolType}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-gray-800 mb-1">School Name</label>
+              <input
+                type="text"
+                name="schoolName"
+                value={formData.schoolName}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Enter your school's name"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-800 mb-1">Administrator Name</label>
+              <input
+                type="text"
+                name="adminName"
+                value={formData.adminName}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Your full name"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-800 mb-1">Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="admin@school.edu"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-800 mb-1">Password</label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Create a strong password"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-800 mb-1">School Type</label>
+              <select
+                name="schoolType"
+                value={formData.schoolType}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                <option value="">Select school type</option>
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-black text-white py-2 rounded focus:outline-none focus:ring-2"
             >
-              <option value="">Select school type</option>
-              <option value="public">Public</option>
-              <option value="private">Private</option>
-            </select>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
-            Create Account
-          </button>
-          <p className="text-center mt-4">
-            Already have an account? <a href="#" className="text-blue-500 hover:underline">Log in</a>
-          </p>
-        </form>
+              Create Account
+            </button>
+            <p className="text-center mt-4">
+              Already have an account? <a href="#" className="text-black hover:underline">Log in</a>
+            </p>
+          </form>
+        </div>
       </div>
-      <div className="hidden lg:block lg:w-1/2 bg-image"></div>
+      <div className="hidden lg:flex lg:w-1/2 lg:items-center lg:justify-center lg:h-full">
+        <img
+          src="https://scontent.fixe3-1.fna.fbcdn.net/v/t39.30808-6/300614121_441917111312615_5282546850771544217_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=I2g-urHpEDYQ7kNvgF3P_RG&_nc_ht=scontent.fixe3-1.fna&oh=00_AYDfvFTJGj8y3Sae_lI-zs4fm8NMeeTcMvX8exShtqvdCQ&oe=66AE3F3D" 
+          alt="Illustration"
+          className="w-full object-cover"
+        />
+      </div>
     </div>
   );
 };
