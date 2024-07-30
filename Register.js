@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -94,7 +96,7 @@ const Register = () => {
               Create Account
             </button>
             <p className="text-center mt-4">
-              Already have an account? <a href="#" className="text-black hover:underline">Log in</a>
+              Already have an account? <Link to="/" className="text-black hover:underline">Log in</Link>
             </p>
           </form>
         </div>
