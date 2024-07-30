@@ -16,10 +16,10 @@ function Header() {
         <div className="flex flex-grow items-center justify-between ml-8">
           <nav>
             <ul className="flex space-x-5 items-center">
-              <li><a href="#home" className="text-gray-700">Home</a></li>
-              <li><a href="#product" className="text-gray-700">Product</a></li>
-              <li><a href="#pricing" className="text-gray-700">Pricing</a></li>
-              <li><a href="#about" className="text-gray-700">About Us</a></li>
+              <li><Link to="/home" className="text-gray-700">Home</Link></li>
+              <li><Link to="/product" className="text-gray-700">Product</Link></li>
+              <li><Link to="/pricing" className="text-gray-700">Pricing</Link></li>
+              <li><Link to="/aboutus" className="text-gray-700">About Us</Link></li>
             </ul>
           </nav>
           <div className="flex items-center space-x-3">
